@@ -1,0 +1,36 @@
+#!perl
+
+# DATE
+# VERSION
+
+use strict;
+use warnings;
+
+use File::MoreUtil 'dir_empty';
+
+unless (@ARGV == 1) {
+    die "Usage: dir-empty <path>\n";
+}
+
+exit dir_empty($ARGV[0]) ? 0:1;
+
+1;
+# ABSTRACT: Test that a directory is empty
+# POD:
+
+=head1 SYNOPSIS
+
+On the command-line:
+
+ % dir-empty "foo" && echo "foo/ is empty"
+
+
+=head1 DESCRIPTION
+
+This is a simple CLI for L<File::MoreUtil>'s
+L<dir_empty|File::MoreUtils/dir_empty>.
+
+
+=head1 SEE ALSO
+
+L<File::MoreUtil>
