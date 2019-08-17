@@ -1,0 +1,41 @@
+#!perl
+
+# DATE
+# VERSION
+
+use strict;
+use warnings;
+
+use File::MoreUtil 'dir_has_non_dot_subdirs';
+
+unless (@ARGV == 1) {
+    die "Usage: dir-has-non-dot-subdirs <path>\n";
+}
+
+exit(dir_has_non_dot_subdirs($ARGV[0]) ? 0:1);
+
+1;
+# ABSTRACT: Test that a directory has non-dot subdirectories
+# PODNAME:
+
+=head1 SYNOPSIS
+
+On the command-line:
+
+ % dir-has-non-dot-subdirs "foo" && echo "foo/ has non-dot subdirs"
+
+
+=head1 DESCRIPTION
+
+This is a simple CLI for L<File::MoreUtil>'s
+L<dir_has_non_dot_subdirs|File::MoreUtils/dir_has_non_dot_subdirs>. It will exit
+0 if argument is a directory and has non-dot (a.k.a. non-hidden) subdirectories.
+
+
+=head1 SEE ALSO
+
+L<File::MoreUtil>
+
+L<dir-has-subdirs>
+
+L<dir-has-dot-subdirs>

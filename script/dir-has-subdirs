@@ -1,0 +1,39 @@
+#!perl
+
+# DATE
+# VERSION
+
+use strict;
+use warnings;
+
+use File::MoreUtil 'dir_has_subdirs';
+
+unless (@ARGV == 1) {
+    die "Usage: dir-has-subdirs <path>\n";
+}
+
+exit(dir_has_subdirs($ARGV[0]) ? 0:1);
+
+1;
+# ABSTRACT: Test that a directory has subdirs
+# PODNAME:
+
+=head1 SYNOPSIS
+
+On the command-line:
+
+ % dir-has-subdirs "foo" && echo "foo/ has subdirs"
+
+
+=head1 DESCRIPTION
+
+This is a simple CLI for L<File::MoreUtil>'s
+L<dir_has_subdirs|File::MoreUtils/dir_has_subdirs>. It will exit 0 if argument
+is a directory and has subdirs.
+
+
+=head1 SEE ALSO
+
+L<File::MoreUtil>
+
+L<dir-has-files>
