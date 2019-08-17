@@ -14,7 +14,6 @@ unless (@ARGV == 1) {
 
 exit(dir_has_files($ARGV[0]) ? 0:1);
 
-1;
 # ABSTRACT: Test that a directory has files
 # PODNAME:
 
