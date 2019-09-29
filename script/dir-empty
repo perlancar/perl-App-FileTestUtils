@@ -27,7 +27,7 @@ On the command-line:
 =head1 DESCRIPTION
 
 This is a simple CLI for L<File::MoreUtil>'s
-L<dir_empty|File::MoreUtils/dir_empty>. It will exit 0 if argument is a
+L<dir_empty|File::MoreUtil/dir_empty>. It will exit 0 if argument is a
 directory and is empty.
 
 

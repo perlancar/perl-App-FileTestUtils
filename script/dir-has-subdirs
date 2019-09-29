@@ -27,7 +27,7 @@ On the command-line:
 =head1 DESCRIPTION
 
 This is a simple CLI for L<File::MoreUtil>'s
-L<dir_has_subdirs|File::MoreUtils/dir_has_subdirs>. It will exit 0 if argument
+L<dir_has_subdirs|File::MoreUtil/dir_has_subdirs>. It will exit 0 if argument
 is a directory and has subdirs.
 
 
