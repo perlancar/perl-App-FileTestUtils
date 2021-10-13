@@ -1,34 +1,36 @@
 #!perl
 
-# DATE
-# VERSION
-
 use strict;
 use warnings;
 
-use File::MoreUtil 'dir_has_non_dot_files';
+use App::FileTestUtils;
 
-unless (@ARGV == 1) {
-    die "Usage: dir-has-non-dot-files <path>\n";
-}
+# AUTHORITY
+# DATE
+# DIST
+# VERSION
 
-exit(dir_has_non_dot_files($ARGV[0]) ? 0:1);
+App::FileTestUtils::do_script("dir_has_non_dot_files");
 
 # ABSTRACT: Test that a directory has non-dot files
 # PODNAME:
 
 =head1 SYNOPSIS
 
-On the command-line:
+On the command-line, you feed a filename as argument to the script and it will
+exit 0 if the filename exists and is a directory that has non-dot files:
 
  % dir-has-non-dot-files "foo" && echo "foo/ has non-dot files"
 
+With grep mode (C<-g>), you pass one or more filenames in argument or stdin to
+the script and it will print the directories that have non-dot files (or those
+that are not, if you specify C<-v> or C<--invert-match>).
 
 =head1 DESCRIPTION
 
-This is a simple CLI for L<File::MoreUtil>'s
-L<dir_has_non_dot_files|File::MoreUtil/dir_has_non_dot_files>. It will exit 0
-if argument is a directory and has plain, non-dot (a.k.a. non-hidden) files. A
+This is CLI for L<File::MoreUtil>'s
+L<dir_has_non_dot_files|File::MoreUtil/dir_has_non_dot_files>. It will exit 0 if
+argument is a directory and has plain, non-dot (a.k.a. non-hidden) files. A
 plain file is a regular/non-special file. A symlink to a plain file counts as a
 plain file. Non-plain files include named pipes, Unix sockets, and
 block/character special files.

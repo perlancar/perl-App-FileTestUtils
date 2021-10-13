@@ -1,34 +1,35 @@
 #!perl
 
-# DATE
-# VERSION
-
 use strict;
 use warnings;
 
-use File::MoreUtil 'dir_has_non_dot_subdirs';
+use App::FileTestUtils;
 
-unless (@ARGV == 1) {
-    die "Usage: dir-has-non-dot-subdirs <path>\n";
-}
+# AUTHORITY
+# DATE
+# DIST
+# VERSION
 
-exit(dir_has_non_dot_subdirs($ARGV[0]) ? 0:1);
+App::FileTestUtils::do_script("dir_has_non_dot_subdirs");
 
 # ABSTRACT: Test that a directory has non-dot subdirectories
 # PODNAME:
 
 =head1 SYNOPSIS
 
-On the command-line:
+On the command-line, you feed a filename as argument to the script and it will
+exit 0 if the filename exists and is a directory that has non-dot subdirs:
 
  % dir-has-non-dot-subdirs "foo" && echo "foo/ has non-dot subdirs"
 
+With grep mode (C<-g>), you pass one or more filenames in argument or stdin to
+the script and it will print the directories that have non-dot subdirs (or those
+that are not, if you specify C<-v> or C<--invert-match>).
 
 =head1 DESCRIPTION
 
-This is a simple CLI for L<File::MoreUtil>'s
-L<dir_has_non_dot_subdirs|File::MoreUtil/dir_has_non_dot_subdirs>. It will exit
-0 if argument is a directory and has non-dot (a.k.a. non-hidden) subdirectories.
+This is CLI for L<File::MoreUtil>'s
+L<dir_has_non_dot_subdirs|File::MoreUtil/dir_has_non_dot_subdirs>.
 
 
 =head1 SEE ALSO
