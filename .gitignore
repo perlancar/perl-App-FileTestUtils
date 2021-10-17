@@ -2,3 +2,4 @@ App-FileTestUtils-*
 .build
 *~
 nytprof*
+.DS_Store
