@@ -1,0 +1,42 @@
+#!perl
+
+use strict;
+use warnings;
+
+use App::FileTestUtils;
+
+# AUTHORITY
+# DATE
+# DIST
+# VERSION
+
+App::FileTestUtils::do_script("dir_only_has_dot_subdirs");
+
+# ABSTRACT: Test that a directory only has dot subdirectories
+# PODNAME:
+
+=head1 SYNOPSIS
+
+On the command-line, you feed a filename as argument to the script and it will
+exit 0 if the filename exists and is a directory that only has dot subdirs:
+
+ % dir-only-has-dot-subdirs "foo" && echo "foo/ only has dot subdirs"
+
+With grep mode (C<-g>), you pass one or more filenames in argument or stdin to
+the script and it will print the directories that only have dot subdirs (or
+those that are not, if you specify C<-v> or C<--invert-match>).
+
+
+=head1 DESCRIPTION
+
+This is CLI for L<File::MoreUtil>'s
+L<dir_only_has_dot_subdirs|File::MoreUtil/dir_only_has_dot_subdirs>. It will
+exit 0 if argument is a directory and only has dot (a.k.a. hidden)
+subdirectories.
+
+
+=head1 SEE ALSO
+
+L<File::MoreUtil>
+
+L<dir-has-dot-subdirs>

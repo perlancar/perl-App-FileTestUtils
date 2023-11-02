@@ -29,7 +29,8 @@ if you specify C<-v> or C<--invert-match>).
 
 =head1 DESCRIPTION
 
-This is CLI for L<File::MoreUtil>'s L<dir_empty|File::MoreUtil/dir_not_empty>.
+This is CLI for L<File::MoreUtil>'s
+L<dir_not_empty|File::MoreUtil/dir_not_empty>.
 
 
 =head1 SEE ALSO
