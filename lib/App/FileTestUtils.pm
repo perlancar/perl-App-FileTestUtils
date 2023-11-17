@@ -11,7 +11,7 @@ use warnings;
 use Getopt::Long qw(:config auto_help auto_version gnu_getopt no_ignore_case);
 
 sub do_script {
-    require File::MoreUtil;
+    require File::Util::Test;
     my ($func) = @_;
 
     (my $script = $func) =~ s/_/-/g;
@@ -27,14 +27,14 @@ sub do_script {
         my @files = @ARGV;
         unless (@files) { chomp(@files = <STDIN>) }
         for my $file (@files) {
-            if (&{"File::MoreUtil::$func"}($file) xor $opt_invert_match) { print $file, "\n" }
+            if (&{"File::Util::Test::$func"}($file) xor $opt_invert_match) { print $file, "\n" }
         }
         exit 0;
     } else {
         unless (@ARGV == 1) {
             die "Usage: $script <path>\n";
         }
-        exit(&{"File::MoreUtil::$func"}($ARGV[0]) ? 0:1);
+        exit(&{"File::Util::Test::$func"}($ARGV[0]) ? 0:1);
     }
 }
 
@@ -55,6 +55,6 @@ related to file testing:
 
 The file testing operators in L<perlfunc>, e.g. C<-s>, C<-x>, C<-r>, etc.
 
-L<File::MoreUtil>
+L<File::Util::Test>
 
 =cut

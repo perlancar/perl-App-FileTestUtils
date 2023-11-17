@@ -28,12 +28,12 @@ those that are not, if you specify C<-v> or C<--invert-match>).
 
 =head1 DESCRIPTION
 
-This is CLI for L<File::MoreUtil>'s
-L<dir_only_has_non_dot_subdirs|File::MoreUtil/dir_only_has_non_dot_subdirs>.
+This is CLI for L<File::Util::Test>'s
+L<dir_only_has_non_dot_subdirs|File::Util::Test/dir_only_has_non_dot_subdirs>.
 
 
 =head1 SEE ALSO
 
-L<File::MoreUtil>
+L<File::Util::Test>
 
 L<dir-has-non-dot-subdirs>

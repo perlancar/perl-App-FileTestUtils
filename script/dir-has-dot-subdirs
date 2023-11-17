@@ -29,14 +29,14 @@ that are not, if you specify C<-v> or C<--invert-match>).
 
 =head1 DESCRIPTION
 
-This is CLI for L<File::MoreUtil>'s
-L<dir_has_dot_subdirs|File::MoreUtil/dir_has_dot_subdirs>. It will exit 0 if
+This is CLI for L<File::Util::Test>'s
+L<dir_has_dot_subdirs|File::Util::Test/dir_has_dot_subdirs>. It will exit 0 if
 argument is a directory and has dot (a.k.a. hidden) subdirectories.
 
 
 =head1 SEE ALSO
 
-L<File::MoreUtil>
+L<File::Util::Test>
 
 L<dir-has-subdirs>
 

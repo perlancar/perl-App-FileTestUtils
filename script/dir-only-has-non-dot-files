@@ -28,8 +28,8 @@ those that are not, if you specify C<-v> or C<--invert-match>).
 
 =head1 DESCRIPTION
 
-This is CLI for L<File::MoreUtil>'s
-L<dir_only_has_non_dot_files|File::MoreUtil/dir_only_has_non_dot_files>. It will
+This is CLI for L<File::Util::Test>'s
+L<dir_only_has_non_dot_files|File::Util::Test/dir_only_has_non_dot_files>. It will
 exit 0 if argument is a directory and only has plain, non-dot (a.k.a.
 non-hidden) files. A plain file is a regular/non-special file. A symlink to a
 plain file counts as a plain file. Non-plain files include named pipes, Unix
@@ -38,6 +38,6 @@ sockets, and block/character special files.
 
 =head1 SEE ALSO
 
-L<File::MoreUtil>
+L<File::Util::Test>
 
 L<dir-has-non-dot-files>
